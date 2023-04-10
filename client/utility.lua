@@ -1,0 +1,10 @@
+function CreateBlip(pos, name, color, type)
+    local blip = AddBlipForCoord(pos)
+    SetBlipSprite (blip, type)
+    SetBlipScale  (blip, 0.9)
+    SetBlipColour (blip, color)
+    SetBlipAsShortRange(blip, true)
+    BeginTextCommandSetBlipName('STRING')
+    AddTextComponentString(name)
+    EndTextCommandSetBlipName(blip)
+end
